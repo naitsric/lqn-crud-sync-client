@@ -11,3 +11,8 @@ class LQNGraphQClient:
         with ClusterRpcProxy(self.config) as rpc:
             find_one_concept_by_code = rpc.crud.find_one_concept_by_code(code)
             return find_one_concept_by_code['data']['allPaymentConcepts'][0]
+
+    def find_one_payment_status_by_default(self):
+        with ClusterRpcProxy(self.config) as rpc:
+            find_one_concept_by_code = rpc.crud.find_one_payment_status_by_default()
+            return find_one_concept_by_code['data']['allPaymentStatuses'][0]
