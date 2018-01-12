@@ -1,1 +1,3 @@
 .idea
+*.pyc/
+crud_sync_client/__pycache__/
