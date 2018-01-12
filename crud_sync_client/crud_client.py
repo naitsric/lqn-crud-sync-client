@@ -21,3 +21,8 @@ class LQNGraphQClient:
         with ClusterRpcProxy(self.config) as rpc:
             find_one_concept_by_code = rpc.crud.update_necessity_concept_send_to_pay(id)
             return find_one_concept_by_code['data']['updateNecessityConcept']
+
+    def update_user_token(self, user_id, token):
+        with ClusterRpcProxy(self.config) as rpc:
+            update_user_token = rpc.crud.update_user_token(user_id, token)
+            return update_user_token['data']['updateUser']
