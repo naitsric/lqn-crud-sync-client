@@ -10,5 +10,4 @@ class LQNGraphQClient:
     def find_one_concept_by_code(self, code):
         with ClusterRpcProxy(self.config) as rpc:
             find_one_concept_by_code = rpc.crud.find_one_concept_by_code(code)
-            user_id = find_one_concept_by_code['data']['allPaymentConcepts'][0]["id"]
-            return user_id
+            return find_one_concept_by_code['data']['allPaymentConcepts'][0]
