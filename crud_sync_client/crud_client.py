@@ -55,4 +55,4 @@ class LQNGraphQClient:
     def update_necessity_status(self, id, status_id):
         with ClusterRpcProxy(self.config) as rpc:
             update_necessity_status = rpc.crud.update_necessity_status(id, status_id)
-            return update_necessity_status['data']['allStatusConcepts']
+            return update_necessity_status['data']['updateNecessityConcept']
