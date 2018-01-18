@@ -41,3 +41,8 @@ class LQNGraphQClient:
         with ClusterRpcProxy(self.config) as rpc:
             update_payment_status_from_response = rpc.crud.update_payment_status_from_response(id, status_id, transaction_response, payment_date)
             return update_payment_status_from_response['data']['updatePayment']
+
+    def find_one_necessity_concept_status_by_completed(self):
+        with ClusterRpcProxy(self.config) as rpc:
+            update_payment_status_from_response = rpc.crud.find_one_necessity_concept_status_by_completed()
+            return update_payment_status_from_response['data']['allStatusConcepts']
