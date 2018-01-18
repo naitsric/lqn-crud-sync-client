@@ -36,3 +36,8 @@ class LQNGraphQClient:
         with ClusterRpcProxy(self.config) as rpc:
             update_user_token = rpc.crud.update_user_token(user_id, token, token_franchise)
             return update_user_token['data']['updateUser']
+
+    def update_payment_status_from_response(self, id, status_id, transaction_response, payment_date):
+        with ClusterRpcProxy(self.config) as rpc:
+            update_payment_status_from_response = rpc.crud.update_payment_status_from_response(id, status_id, transaction_response, payment_date)
+            return update_payment_status_from_response['data']['updatePayment']
