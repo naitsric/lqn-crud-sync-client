@@ -8,7 +8,7 @@ greenlet==0.4.12
 idna==2.6
 kombu==3.0.37
 mock==2.0.0
-nameko==2.8.3
+nameko==2.14.0
 path.py==10.5
 pbr==3.1.1
 PyYAML==3.12
